@@ -14,7 +14,7 @@ class SearchBox extends StatelessWidget {
         Card(
           color: const Color.fromARGB(255, 199, 199, 214),
           child:ListTile(
-            minTileHeight: 80,
+            // minTileHeight: 80,
             title: TextField(
                 onChanged: (value) {
                   context.read <FilterelocationBloc>().add(FilterLocations(value));

@@ -10,7 +10,7 @@ class MinimizedView extends StatelessWidget {
     return Card(
       color: const Color.fromARGB(255, 199, 199, 214),
       child: ListTile(
-        minTileHeight: 80,
+        // minTileHeight: 80,
         title: const Text("Search",style: TextStyle(fontSize:20, fontWeight: FontWeight.bold),),
         trailing: ElevatedButton(
           onPressed: () { context.read <ShowlocationBloc>().add(Minimizeicon());},
