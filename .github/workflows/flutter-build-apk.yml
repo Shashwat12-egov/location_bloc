@@ -47,6 +47,14 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Create .env file
+        run: |
+          echo "API_URL=$API_URL" >> apps/health_campaign_field_worker_app/.env
+          echo "API_KEY=$API_KEY" >> apps/health_campaign_field_worker_app/.env
+        env:
+          API_URL: ${{ secrets.ENV_DEV_API_URL }}
+          API_KEY: ${{ secrets.ENV_DEV_API_KEY }}
+
       # Run flutter build apk to build the APK
       - name: Build APK
         run: flutter build apk --release
